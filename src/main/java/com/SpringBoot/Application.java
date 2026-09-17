@@ -26,7 +26,6 @@ public class Application {
 		System.out.println(course1 == course2);
 
 
-
 //		CourseRepository courseRepository = context.getBean(CourseRepository.class);
 //
 //		courseRepository.saveCourse();
