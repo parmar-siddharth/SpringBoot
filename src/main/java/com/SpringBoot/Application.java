@@ -5,18 +5,20 @@ import com.SpringBoot.service.CourseService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
 
 @SpringBootApplication(scanBasePackages = "com.SpringBoot")
 public class Application {
 
 	public static void main(String[] args) {
-		ApplicationContext context = SpringApplication.run(Application.class, args);
+		ConfigurableApplicationContext context = SpringApplication.run(Application.class, args);
 
 		CourseService courseService = context.getBean(CourseService.class);
 
-		courseService.purchased();
+//		courseService.purchased();
+//
+//		courseService.showCourseName();
 
-		courseService.showCourseName();
 
 		JavaSpringBoot course1 = context.getBean(JavaSpringBoot.class);
 		JavaSpringBoot course2 = context.getBean(JavaSpringBoot.class);
@@ -24,6 +26,8 @@ public class Application {
 		course1.addCourse();
 
 		System.out.println(course1 == course2);
+
+		context.close();
 
 
 //		CourseRepository courseRepository = context.getBean(CourseRepository.class);

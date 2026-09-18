@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class Django implements Course{
     @Override
-    public void addCourse() {
-        System.out.println("Added Django Course");
+    public String addCourse() {
+        return "Added Django Course";
     }
 }

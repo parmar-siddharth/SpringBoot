@@ -7,8 +7,10 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class AppConfig {
 
-    @Bean
+    /*@Bean
     public JavaSpringBoot javaSpringBoot(){
         return new JavaSpringBoot();
-    }
+    }*/
+
+
 }

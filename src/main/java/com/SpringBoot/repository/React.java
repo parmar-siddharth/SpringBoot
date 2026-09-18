@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public class React implements Course{
     @Override
-    public void addCourse() {
-        System.out.println("Added React.js Course");
+    public String addCourse() {
+        return "Added React.js Course";
     }
 }
